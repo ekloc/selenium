@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  selenium:
+    image: seleniarm/standalone-chromium
+    ports:
+      - 4444:4444
+      - 7900:7900
+    restart: always
+
+  app:
+    build:
+      context: ./py-test
+    volumes:
+      - ./py-test/app:/app/py-test
+    command: sh -c "python3 app.py"
+    depends_on:
+      - selenium

@@ -1,4 +1,4 @@
-# Steps to run the tests locally 
+# Steps to run the tests manually 
 Use it if you don't have docker/docker-compose (for example, if you use podman or nerdctl)  For testing only.
 
 Step 1

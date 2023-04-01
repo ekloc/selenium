@@ -1,0 +1,17 @@
+version: '2'
+
+services:
+    chrome:
+      image: selenium/standalone-chrome:latest
+    app:
+        build: .
+        image: harry-automation-test
+        environment:
+            WFIX_URL:
+            WFIX_USERNAME:
+            WFIX_PASSWORD:
+        volumes:
+            -  ./Results:/app/robot/Results
+        depends_on:
+            - chrome
+            

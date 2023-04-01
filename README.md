@@ -1,10 +1,22 @@
 # Using containers to run Selenium tests
 Attempt to make selenium tests run in containers
 
-## Attempt 1
+## Selenium Python
 Using Selenium Python bindings to write sample functional/acceptance tests using Selenium WebDriver.  See the [documentation](https://selenium-python.readthedocs.io/)
 
 The code for it is in py-test folder
+
+To run execute the following
+```
+docker-compose up
+```
+
+or
+
+```
+docker compose -f docker-compose-py.yaml up
+```
+
 
 ### `Warning`
 > I run into the issue with selenium/standalone-chrome image.  
@@ -14,6 +26,6 @@ The code for it is in py-test folder
 
 
 
-## Attempt 2
+## Selenium Robot Framework
 Running Selenium tests with the help of [Robot Framework](https://robotframework.org/)
 
