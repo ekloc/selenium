@@ -3,9 +3,10 @@ FROM python:3.10-alpine
 # Enure python stdout and stderr is printed to terminal without buffer
 ENV PYTHONUNBUFFERED 1
 
-WORKDIR /app/robot
+WORKDIR /app/robot-test
 
-COPY robot .
+COPY app .
+COPY requirements.txt .
 
 #Below code did not work
 #RUN apt-get install -y libglib2.0-0=2.50.3-2 \
@@ -21,4 +22,4 @@ COPY robot .
 RUN pip install -U -r requirements.txt 
 
 # Execute run script with environement variables defined in env.list
-CMD [ "sh", "-c", "./run.sh $ENV_HOST $ENV_PORT" ]
+CMD [ "sh", "-c", "./run.sh ]

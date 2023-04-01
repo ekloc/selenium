@@ -8,11 +8,11 @@ services:
       - 7900:7900
     restart: always
 
-  app:
+  robot-test:
     build:
-      context: ./py-test
+      context: ./robot-test
     volumes:
-      - ./py-test/app:/app/py-test
+      - ./robot-test/app/results:/app/robot-test/results
     command: sh -c "python3 app.py"
     depends_on:
       - selenium

@@ -3,7 +3,7 @@
 Step 1
 
 ```
-podman build -t harry-automation-test .
+podman build -t robot-test .
 ```
 
 Step 2
@@ -18,11 +18,11 @@ podman run --rm --network test --name=chrome --hostname=chrome -d -p 4444:4444 -
 
 Step 4
 ```
-podman run --network=test --env-file env.list.env1 -v ./Results:/app/robot/results harry-automation-test:latest
+podman run --network=test --env-file env.list.env1 -v ./Results:/app/robot/results robot-test:latest
 
 or 
 
-podman run --network=test --env-file env.list.env1 -v /dev/shm:/dev/shm -v selenium-test-results:/app/robot/results harry-automation-test:latest
+podman run --network=test --env-file env.list.env1 -v /dev/shm:/dev/shm -v selenium-test-results:/app/robot/results robot-test:latest
 ```
 
 Step 5 - remove dangling images (images that return <none>:<none> when running `podman images` command)
