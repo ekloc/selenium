@@ -2,7 +2,7 @@ version: '3'
 
 services:
   selenium:
-    image: selenium/standalone-chrome
+    image: seleniarm/standalone-chromium
     ports:
       - 4444:4444
       - 7900:7900
@@ -10,7 +10,7 @@ services:
 
   app:
     build:
-      context: .
+      context: ./py-test
     volumes:
       - ./py-test/app:/app/py-test
     command: sh -c "python3 app.py"
