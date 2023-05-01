@@ -5,7 +5,7 @@ services:
       image: selenium/standalone-chrome:latest
     app:
         build: .
-        image: harry-automation-test
+        image: robot-test
         environment:
             WFIX_URL:
             WFIX_USERNAME:

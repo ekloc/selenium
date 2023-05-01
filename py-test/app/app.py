@@ -6,5 +6,5 @@ sleep(5)
 
 driver = webdriver.Remote('http://selenium:4444/wd/hub',desired_capabilities=DesiredCapabilities.CHROME)
 
-driver.get('https://python.org')
+driver.get('http://localhost:8080')
 driver.save_screenshot('screenshot.png')
